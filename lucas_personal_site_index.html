@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lucas Burnham — Profile</title>
+  <meta name="description" content="Personal profile for Lucas Burnham: entrepreneur, sales leader, and builder." />
+  <meta property="og:title" content="Lucas Burnham — Profile" />
+  <meta property="og:description" content="Entrepreneur, solar sales leader, and builder." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/profile.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg: #0b0d10; /* page background */
+      --muted: #a6adbb; /* secondary text */
+      --text: #e8ecf1; /* primary text */
+      --card: #12151a; /* card background */
+      --border: #222833; /* subtle borders */
+      --accent: #5b9cff; /* CHANGE ME: your accent color */
+      --accent-2: #32d7a9; /* optional second accent */
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a{color: var(--accent); text-decoration: none}
+    a:hover{text-decoration: underline}
+    .container{max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem}
+    header.site-header{position: sticky; top: 0; backdrop-filter: blur(10px); background: rgba(11,13,16,.7); border-bottom: 1px solid var(--border); z-index: 50}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+    .brand{font-weight:800; letter-spacing: .3px}
+    .nav a{color: var(--text); opacity:.9}
+    .nav-links{display:flex; gap:1rem; align-items:center}
+    .btn{display:inline-block; padding:.65rem 1rem; border-radius: .85rem; border:1px solid var(--border); background:linear-gradient(180deg,#171b22,#0e1117); color:var(--text); box-shadow: var(--shadow)}
+    .btn:hover{transform: translateY(-1px)}
+    .btn-accent{border-color: transparent; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #0b0d10; font-weight:700}
+
+    /* Hero */
+    .hero{padding: 4rem 0 2rem}
+    .hero-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:2rem; align-items:center}
+    .kicker{display:inline-flex; gap:.5rem; align-items:center; font-size:.85rem; padding:.35rem .6rem; border:1px solid var(--border); border-radius:999px; color: var(--muted)}
+    h1{font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin: .75rem 0}
+    .tagline{color: var(--muted); font-size: 1.05rem}
+    .cta{display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1.25rem}
+    .headshot{width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border:3px solid var(--border); box-shadow: var(--shadow)}
+    .hero-card{background: var(--card); border:1px solid var(--border); padding:1.2rem; border-radius: 1.25rem}
+
+    /* Sections */
+    section{padding: 3rem 0}
+    .section-title{font-size:1.35rem; margin-bottom: .75rem}
+    .muted{color: var(--muted)}
+    .grid{display:grid; gap:1rem}
+    .grid-3{grid-template-columns: repeat(3, minmax(0,1fr))}
+    .grid-2{grid-template-columns: repeat(2, minmax(0,1fr))}
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns: 1fr}
+      .grid-3{grid-template-columns: 1fr}
+      .grid-2{grid-template-columns: 1fr}
+      .headshot{width:160px; height:160px}
+    }
+
+    .card{background: var(--card); border:1px solid var(--border); padding:1rem; border-radius: 1rem; box-shadow: var(--shadow)}
+    .card h3{margin-top:.25rem; margin-bottom:.25rem}
+    .badges{display:flex; flex-wrap: wrap; gap:.5rem}
+    .badge{border:1px solid var(--border); color: var(--muted); padding:.35rem .55rem; border-radius:.65rem; font-size:.85rem}
+
+    footer{border-top:1px solid var(--border); padding:3rem 0; color:var(--muted)}
+
+    /* Theme toggle */
+    .toggle{cursor:pointer; border:1px solid var(--border); border-radius:999px; padding:.35rem .6rem; color:var(--muted)}
+    .socials{display:flex; gap:.75rem; align-items:center}
+    .socials a{display:inline-flex; align-items:center; gap:.4rem; padding:.4rem .6rem; border:1px solid var(--border); border-radius:.7rem}
+    .sr-only{position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">LB</div>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button class="toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="kicker">👋 Hi, I’m Lucas</span>
+          <h1>Entrepreneur & Solar Sales Leader</h1>
+          <p class="tagline">I build high-performing sales teams, data-driven systems, and useful products. Currently leading growth at Ambia / MPWR Solar and exploring tech-enabled home services.</p>
+          <div class="cta">
+            <a class="btn btn-accent" href="mailto:you@example.com">Email me</a>
+            <a class="btn" href="assets/Lucas_Burnham_Resume.pdf">View résumé</a>
+          </div>
+          <div class="socials" style="margin-top:1rem">
+            <a href="#" aria-label="GitHub">
+              <span>🐙</span><span class="muted">GitHub</span>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <span>💼</span><span class="muted">LinkedIn</span>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <span>📸</span><span class="muted">Instagram</span>
+            </a>
+            <a href="#" aria-label="X/Twitter">
+              <span>🕊️</span><span class="muted">X</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-card" style="text-align:center">
+          <!-- Replace assets/profile.jpg with your photo placed in /assets/ -->
+          <img class="headshot" src="assets/profile.jpg" alt="Portrait of Lucas Burnham" />
+          <p class="muted" style="margin:.75rem 0 0">Based in Utah • Open to collabs</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="card">
+          <p>Hey! I’m Lucas. I love building teams and systems that turn messy, real‑world problems into simple playbooks. In solar, I’ve managed multiple teams ("Rolls Royce", "Subaru") across several markets and obsess over KPIs, training, and ethics‑first selling. I’m also exploring new ventures—from fiber marketing to a subscription home‑maintenance service.</p>
+          <p>When I’m not working, you’ll find me canyoneering in southern Utah, skiing, or tinkering with spreadsheets for fun.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Sales KPI Dashboard</h3>
+            <p class="muted">Clean, color‑coded tracker for door‑to‑door teams with weekly rollups and leaderboards.</p>
+            <div class="badges">
+              <span class="badge">Google Sheets</span>
+              <span class="badge">Apps Script</span>
+              <span class="badge">Data viz</span>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Home Services Subscription</h3>
+            <p class="muted">Concept for tech‑enabled maintenance: landscaping, cleaning, HVAC, and more in one plan.</p>
+            <div class="badges">
+              <span class="badge">Ops</span>
+              <span class="badge">Product</span>
+              <span class="badge">Go‑to‑market</span>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Fiber D2D Program</h3>
+            <p class="muted">Door‑to‑door playbook and contract structure for regional fiber ISPs.</p>
+            <div class="badges">
+              <span class="badge">BizDev</span>
+              <span class="badge">Legal</span>
+              <span class="badge">Playbooks</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Ambia / MPWR Solar — Sales Lead</h3>
+            <p class="muted">2023–Present • Utah + multi‑market</p>
+            <ul>
+              <li>Built and led multiple high‑output teams; trained NEPQ and science‑of‑selling approach.</li>
+              <li>Created KPI stack (hours knocked, sets, close rate, cancels) and weekly pipeline reviews.</li>
+              <li>Improved referrals program (+$500 incentives) and field ops coordination.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Entrepreneur / Builder</h3>
+            <p class="muted">Ongoing</p>
+            <ul>
+              <li>Fiber marketing program (broker model) with per‑install fee structure.</li>
+              <li>Exploring real estate acquisitions in Utah County & St. Louis Metro East.</li>
+              <li>Prototyping home‑maintenance subscription service with tiered plans.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="card">
+          <div class="badges">
+            <span class="badge">Sales leadership</span>
+            <span class="badge">Door‑to‑door</span>
+            <span class="badge">Training & coaching</span>
+            <span class="badge">Data analysis</span>
+            <span class="badge">Google Sheets</span>
+            <span class="badge">Playbook design</span>
+            <span class="badge">Negotiation</span>
+            <span class="badge">ops</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="card">
+          <p>Want to collaborate or chat? Reach out:</p>
+          <p>📧 <a href="mailto:you@example.com">you@example.com</a></p>
+          <p>Or DM me on <a href="#">LinkedIn</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap">
+        <span>© <span id="year"></span> Lucas Burnham. All rights reserved.</span>
+        <span class="muted">Built with plain HTML/CSS • Hosted on GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if(id.length > 1){
+          const el = document.querySelector(id);
+          if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}) }
+        }
+      });
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle (simple preference)
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem('theme');
+    if(saved === 'light') document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';
+    if(!saved && !prefersDark) document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';
+    toggle.addEventListener('click', () => {
+      const curr = localStorage.getItem('theme');
+      if(curr === 'light'){
+        localStorage.removeItem('theme');
+        document.documentElement.style.filter = '';
+      } else {
+        localStorage.setItem('theme','light');
+        document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';
+      }
+    });
+  </script>
+</body>
+</html>
